@@ -49,6 +49,7 @@ class PropertiesFileTask extends PropertiesGeneratorTask<PropertiesFile> {
 allprojects  {
   apply plugin: 'java-library'
   apply plugin: 'eclipse'
+  apply plugin: 'maven-publish' // Not strictly necessary, but convenient
   if(project.hasProperty('jacoco')) apply plugin: 'jacoco'
 
   group = 'de.lmu.ifi.dbs.elki'
